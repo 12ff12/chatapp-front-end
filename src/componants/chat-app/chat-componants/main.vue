@@ -180,6 +180,7 @@ const sendMessage = async () => {
         }
       );
         if (props.userId !== -1){
+          aiLoading.value=false
             return;
         }
       await saveConversationMessages(Date.now(), message, localStorage.getItem("user_id"));
