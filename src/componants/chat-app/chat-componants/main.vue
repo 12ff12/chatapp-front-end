@@ -179,6 +179,9 @@ const sendMessage = async () => {
           },
         }
       );
+        if (props.userId !== -1){
+            return;
+        }
       await saveConversationMessages(Date.now(), message, localStorage.getItem("user_id"));
       await saveConversationMessages(Date.now() + 1, res.data.response, -1);
       messages.value.push({
