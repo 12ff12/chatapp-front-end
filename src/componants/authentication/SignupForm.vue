@@ -207,8 +207,8 @@ const handleSubmit = async () => {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user_id', response.data.user);    
       window.location.href = '/chat';
-    }).catch((error) => {
-      error.value = error.response?.data?.message || 'An error occurred during signup. Please try again.';
+    }).catch((err) => {
+      error.value = err.response?.data?.message || 'An error occurred during signup. Please try again.';
       
     });
   
