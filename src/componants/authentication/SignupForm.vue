@@ -199,7 +199,7 @@ const handleSubmit = async () => {
       formData.append('avatar', avatar.value);
     }
 
-    const response = await axios.post('https://grey-dotterel-732681.hostingersite.com/api/signup', formData, {
+    const response = await axios.post('http://localhost:8000/api/signup', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },

@@ -145,7 +145,7 @@ const handleImageError = () => {
 
 onMounted(() => {
     
-    axios.get('https://grey-dotterel-732681.hostingersite.com/api/users', {
+    axios.get('http://localhost:8000/api/users', {
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
         },
@@ -157,7 +157,7 @@ onMounted(() => {
         }
     });
 
-    axios.get('https://grey-dotterel-732681.hostingersite.com/api/myprofile', {
+    axios.get('http://localhost:8000/api/myprofile', {
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
         },
@@ -185,7 +185,7 @@ onUnmounted(() => {
 const logout = () => {
     
    axios.post(
-  'https://grey-dotterel-732681.hostingersite.com/api/logout',
+  'http://localhost:8000/api/logout',
   {},
   {
     headers: {
@@ -225,7 +225,7 @@ const handleUserSelected = async (userId: User, conversationId: number | null) =
     if(conversationId==null){
         return;
     }
-    axios.post('https://grey-dotterel-732681.hostingersite.com/api/markasread',
+    axios.post('http://localhost:8000/api/markasread',
     {
         conversation_id: conversationId,
         fromuserId: userId.id
@@ -252,7 +252,7 @@ const handleUserSelected = async (userId: User, conversationId: number | null) =
 const handleSearch = debounce(() => {
     loading.value=true;
   if (!searchQuery.value.trim()){
- axios.get('https://grey-dotterel-732681.hostingersite.com/api/users',{
+ axios.get('http://localhost:8000/api/users',{
         headers:{
             Authorization: `Bearer ${localStorage.getItem('token')}`
         },
@@ -278,7 +278,7 @@ const handleSearch = debounce(() => {
     return;
   } 
 
-  axios.get('https://grey-dotterel-732681.hostingersite.com/api/findUser', {
+  axios.get('http://localhost:8000/api/findUser', {
     params: { search: searchQuery.value },
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
   })

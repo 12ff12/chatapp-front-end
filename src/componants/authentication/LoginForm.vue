@@ -56,7 +56,7 @@ const showPassword = ref<boolean>(false);
 const error = ref<string>('');
 const handleSubmit = () => {
   error.value = ''; // Clear any previous errors
-  axios.post('https://grey-dotterel-732681.hostingersite.com/api/login', {
+  axios.post('http://localhost:8000/api/login', {
     email: email.value,
     password: password.value,
   }, {

@@ -171,7 +171,7 @@ const sendMessage = async () => {
         if (container) container.scrollTop = container.scrollHeight;
       });
       const res = await axios.post(
-          "https://grey-dotterel-732681.hostingersite.com/api/generate",
+          "http://localhost:8000/api/generate",
         { prompt: context },
         {
           headers: {
