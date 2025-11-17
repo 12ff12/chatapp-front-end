@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const  reversestring =(str)=>{
+        let reversed = "";
+       for(let i=str.length-1;i>=0;i--){
+        reversed += str[i];
+       }
+       return reversed;
+    }
+    console.log(reversestring("hello"));
+
+    const ispalindrom =(str)=>{
+        if(str==reversestring(str)){
+            return true
+        }
+     return false
+
+    }
+    console.log(ispalindrom(''))
+
+    const removeduplicate=(array)=>{
+        let newarray=[...array]
+         for(let i=0;i<= newarray.length-1;i++){
+            for(let j=i+1;j<= newarray.length-1;j++){
+                if(newarray[i]==newarray[j]){
+                    newarray.splice(i,1)
+                    j--
+                    i--
+                }
+            
+        }
+         }
+         return newarray
+    }
+    console.log(removeduplicate([1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]))
+    const fizzbuzz=(number)=>{
+            let result=""
+            if(number%3==0){
+                result+="fizz"
+            }
+            if(number%5==0){
+                result+="buzz"
+            }
+            return result||'isnt dervable  '
+    }
+    console.log(fizzbuzz(73))
+
+    const tostring=(str)=> str.split('').reverse().join('')
+    console.log(tostring('hello'))
+    const summ =(arr)=>arr.reduce((num,acc)=>acc+num,0)
+    console.log(summ([1,2,3,4]))
+    const factoriel=(num)=>{
+        if(num<0){
+            return "factoriel is not defined for negative numbers"
+        }
+        let factoriel= 1
+        for(let i=num;i>=1;i--){
+            factoriel**=i
+        }
+        return factoriel
+    }
+    console.log("factoriaò",factoriel(5))
+</script>
+</html

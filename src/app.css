@@ -1,0 +1,29 @@
+.users-container {
+    width: 30%;
+    min-width: 250px;
+    height: 100dvh;
+    display: flex;
+    flex-direction: row;
+    position: relative; /* Changed from float */
+    background: white; /* Added to ensure consistent background */
+}
+
+.chat-container {
+    flex: 1; /* Takes remaining space */
+    height: 100dvh;
+    overflow: hidden; /* Prevents content from spilling out */
+}
+
+/* Add this to your existing CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}

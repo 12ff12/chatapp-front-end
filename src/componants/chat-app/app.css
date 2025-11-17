@@ -1,0 +1,51 @@
+/* Chat App Styles */
+.chat-app {
+ 
+  height: 100vh;
+  background-color: #f5f7fb;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.users-container {
+  width: 350px;
+  border-right: 1px solid #e2e8f0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f0f2f5;
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .users-container {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .chat-app {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .chat-container {
+    height: calc(100vh - 80px);
+  }
+}
+/* mobile Design */
+@media (max-width: 425px) {
+
+
+
+}
+

@@ -1,0 +1,76 @@
+.user-container {
+    display: flex;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    min-width: 250px;
+    padding-left: 25px;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 0.3s;
+    font-family: 'Gill Sans', sans-serif;
+   margin-bottom: 5px;
+    
+
+}
+.user-container:hover {
+    background-color:rgb(239, 225, 225);
+    border-radius: 15px;
+}
+.user-container-active {
+    background-color:rgb(239, 225, 225);
+    border-radius: 15px;
+}
+.userchat-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 16%;
+
+    
+}
+.userchat-name {
+    font-weight: bolder;
+    color: black;
+    font-size: large;
+    position: absolute;
+    margin: 0;
+    top: 19%;
+    left:24%;
+    cursor: pointer;
+    
+}
+.userchat-lastmessage {
+    position: absolute;
+    font-size: medium;
+    margin: 0;
+    top: 60%;
+    left:24%;
+    width: 200px;
+    cursor: pointer;
+    color: #695781;
+    white-space: nowrap;       /* prevent text from breaking into multiple lines */
+    overflow: hidden;          /* hide anything that overflows */
+    text-overflow: ellipsis;   
+}
+.userchat-lastmessagetime {
+    position: absolute;
+    font-size: 13px;
+    margin: 0;
+    color: #695781;
+    right: 3%;
+    top: 3%;
+    white-space: nowrap;       /* prevent text from breaking into multiple lines */
+    overflow: hidden;          /* hide anything that overflows */
+    text-overflow: ellipsis;   
+}
+.unread-messages{
+    color: green;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.userchat-lastmessagetime-online {
+    color: green;
+}
+
